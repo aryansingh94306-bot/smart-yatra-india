@@ -1,0 +1,50 @@
+.tracking{
+    padding:70px 20px;
+    background:#f8f9fa;
+    text-align:center;
+}
+
+.tracking h2{
+    color:#1565C0;
+    margin-bottom:30px;
+}
+
+.tracking-card{
+
+    width:420px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.tracking-card p{
+    margin:15px 0;
+}
+
+.tracking-card button{
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    background:#1565C0;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.tracking-card button:hover{
+    background:#0D47A1;
+}

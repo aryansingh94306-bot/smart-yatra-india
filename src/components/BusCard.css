@@ -1,0 +1,21 @@
+.bus-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+}
+
+.bus-card h2 {
+    color: #0F4C81;
+}
+
+.bus-card button {
+    margin-top: 15px;
+    background: #0F4C81;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+}

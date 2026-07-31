@@ -1,0 +1,53 @@
+.search{
+    padding:60px;
+    text-align:center;
+}
+
+.search h2{
+    color:#1565C0;
+    margin-bottom:30px;
+}
+
+.search-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.search-box input{
+
+    padding:15px;
+
+    width:220px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+}
+
+.search-box button{
+
+    background:#1565C0;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.search-box button:hover{
+
+    background:#0D47A1;
+}

@@ -1,0 +1,73 @@
+.planner{
+
+    padding:80px;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+.planner h2{
+
+    color:#0F4C81;
+
+    margin-bottom:15px;
+
+}
+
+.planner p{
+
+    color:#666;
+
+    margin-bottom:40px;
+
+}
+
+.planner-card{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.planner-card input{
+
+    width:260px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+}
+
+.planner-card button{
+
+    padding:15px 35px;
+
+    background:#0F4C81;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.planner-card button:hover{
+
+    background:#1565C0;
+
+}
