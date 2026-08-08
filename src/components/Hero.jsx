@@ -1,123 +1,184 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Bus,
-  MapPinned,
-  Brain,
   ArrowRight,
+  Bus,
+  Brain,
+  MapPinned,
   ShieldCheck,
+  Sparkles,
 } from "lucide-react";
+
+const stats = [
+  { value: "850+", label: "Daily Buses" },
+  { value: "520+", label: "Connected Villages" },
+  { value: "1.5M+", label: "Passengers" },
+  { value: "98%", label: "Travel Satisfaction" },
+];
+
+const features = [
+  {
+    icon: Brain,
+    title: "AI Journey Planner",
+    text: "Smart route suggestions based on time, fare and traffic.",
+  },
+  {
+    icon: Bus,
+    title: "Live Bus Tracking",
+    text: "Know the live location and ETA of your bus.",
+  },
+  {
+    icon: MapPinned,
+    title: "Village Connectivity",
+    text: "Connecting rural India with smart transport.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Safe Travel",
+    text: "Verified buses, trusted drivers and emergency support.",
+  },
+];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-sky-900 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-orange-500 via-white to-green-600">
+
       {/* Background Blur */}
-      <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl"></div>
+      <div className="absolute -left-24 top-0 h-96 w-96 rounded-full bg-orange-300/40 blur-3xl"></div>
 
-      <div className="relative mx-auto flex min-h-[90vh] max-w-7xl items-center px-6 py-20">
+      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-green-400/30 blur-3xl"></div>
 
-        {/* Left */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex-1"
-        >
-          <span className="rounded-full bg-cyan-500/20 px-4 py-2 text-sm font-medium text-cyan-300">
-            🇮🇳 AI Powered Rural Mobility Platform
-          </span>
+      <div className="mx-auto max-w-7xl px-6 py-24">
 
-          <h1 className="mt-6 text-5xl font-extrabold leading-tight lg:text-7xl">
-            Travel Smarter,
-            <br />
-            <span className="text-cyan-400">
-              Connect Every Village.
-            </span>
-          </h1>
+        <div className="grid items-center gap-16 lg:grid-cols-2">
 
-          <p className="mt-6 max-w-xl text-lg text-slate-300">
-            SmartYatra uses AI to help travelers discover the fastest,
-            safest, and most affordable journeys between villages and
-            cities across India.
-            <div className="mt-6 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2">
-  <span className="text-sm font-medium text-cyan-300">
-    🚀 Designed & Developed by <span className="font-bold text-white">Aryan Singh</span>
-  </span>
-</div>
-          </p>
+          {/* LEFT */}
+          <motion.div
+            initial={{ opacity: 0, x: -70 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: .8 }}
+          >
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              to="/journey-planner"
-              className="flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-slate-900 transition hover:scale-105"
-            >
-              Plan Journey
-              <ArrowRight size={18} />
-            </Link>
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-5 py-2 font-medium text-blue-700 shadow">
 
-            <Link
-              to="/live-tracking"
-              className="rounded-xl border border-white/30 px-6 py-3 transition hover:bg-white/10"
-            >
-              Live Tracking
-            </Link>
-          </div>
+              <Sparkles size={18} />
 
-          <div className="mt-12 grid grid-cols-3 gap-6">
-            <div>
-              <h2 className="text-3xl font-bold text-cyan-400">850+</h2>
-              <p className="text-sm text-slate-300">Daily Buses</p>
+              AI Powered Rural Mobility Platform
+
             </div>
 
-            <div>
-              <h2 className="text-3xl font-bold text-cyan-400">520+</h2>
-              <p className="text-sm text-slate-300">Villages</p>
+            <h1 className="mt-8 text-5xl font-extrabold leading-tight text-slate-900 lg:text-7xl">
+
+              Travel Smarter.
+
+              <br />
+
+              <span className="bg-gradient-to-r from-orange-600 via-blue-700 to-green-700 bg-clip-text text-transparent">
+
+                Connect Every Village.
+
+              </span>
+
+            </h1>
+
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-700">
+
+              SmartYatra is India's next-generation mobility platform that
+              connects villages, towns and cities through buses, metro,
+              auto, e-rickshaw and AI-powered route planning.
+
+            </p>
+
+            <div className="mt-8 rounded-2xl bg-white/70 p-5 shadow-xl">
+
+              <h3 className="font-bold text-blue-700">
+
+                🇮🇳 Smart India Hackathon 2026
+
+              </h3>
+
+              <p className="mt-2 text-slate-700">
+
+                Designed & Developed by <b>Aryan Singh</b>
+
+              </p>
+
             </div>
 
-            <div>
-              <h2 className="text-3xl font-bold text-cyan-400">1.5M+</h2>
-              <p className="text-sm text-slate-300">Passengers</p>
+            <div className="mt-10 flex flex-wrap gap-5">
+
+              <Link
+                to="/journey-planner"
+                className="flex items-center gap-2 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white transition hover:scale-105 hover:bg-orange-600"
+              >
+
+                Plan Journey
+
+                <ArrowRight size={20} />
+
+              </Link>
+
+              <Link
+                to="/live-tracking"
+                className="rounded-xl border-2 border-green-600 px-7 py-4 font-semibold text-green-700 transition hover:bg-green-600 hover:text-white"
+              >
+
+                Live Tracking
+
+              </Link>
+
             </div>
-          </div>
-        </motion.div>
 
-        {/* Right */}
-        <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="hidden flex-1 lg:flex justify-center"
-        >
-          <div className="grid gap-6">
+            <div className="mt-14 grid grid-cols-2 gap-5 lg:grid-cols-4">
 
-            <FeatureCard
-              icon={<Brain size={34} />}
-              title="AI Journey Planner"
-              text="Find the fastest and cheapest route instantly."
-            />
+              {stats.map((item) => (
 
-            <FeatureCard
-              icon={<Bus size={34} />}
-              title="Live Bus Tracking"
-              text="Track buses in real time with ETA."
-            />
+                <div
+                  key={item.label}
+                  className="rounded-2xl bg-white/80 p-5 text-center shadow-xl"
+                >
 
-            <FeatureCard
-              icon={<MapPinned size={34} />}
-              title="Village Connectivity"
-              text="Connect rural India with smart transportation."
-            />
+                  <h2 className="text-3xl font-bold text-orange-600">
 
-            <FeatureCard
-              icon={<ShieldCheck size={34} />}
-              title="Safe Travel"
-              text="Verified buses, drivers and emergency support."
-            />
+                    {item.value}
 
-          </div>
-        </motion.div>
+                  </h2>
 
+                  <p className="mt-2 text-sm text-slate-700">
+
+                    {item.label}
+
+                  </p>
+
+                </div>
+
+              ))}
+
+            </div>
+
+          </motion.div>
+                    {/* RIGHT */}
+          <motion.div
+            initial={{ opacity: 0, x: 70 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="grid gap-6"
+          >
+            {features.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <FeatureCard
+                  key={item.title}
+                  icon={<Icon size={32} />}
+                  title={item.title}
+                  text={item.text}
+                />
+              );
+            })}
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
@@ -126,14 +187,26 @@ export default function Hero() {
 function FeatureCard({ icon, title, text }) {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl shadow-xl"
+      whileHover={{
+        scale: 1.05,
+        y: -6,
+      }}
+      transition={{
+        duration: 0.25,
+      }}
+      className="rounded-3xl bg-white/85 p-7 shadow-2xl backdrop-blur-xl border border-white"
     >
-      <div className="mb-3 text-cyan-400">{icon}</div>
+      <div className="mb-5 inline-flex rounded-2xl bg-gradient-to-r from-orange-500 to-green-500 p-4 text-white">
+        {icon}
+      </div>
 
-      <h3 className="text-xl font-bold">{title}</h3>
+      <h3 className="text-2xl font-bold text-slate-900">
+        {title}
+      </h3>
 
-      <p className="mt-2 text-slate-300">{text}</p>
+      <p className="mt-3 leading-7 text-slate-600">
+        {text}
+      </p>
     </motion.div>
   );
 }

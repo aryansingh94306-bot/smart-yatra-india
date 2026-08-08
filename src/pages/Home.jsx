@@ -9,12 +9,13 @@ import AIShowcase from "../components/AIShowcase";
 import QuickServices from "../components/QuickServices";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
-
+import LocationPicker from "../components/LocationPicker";
 function Home() {
   return (
     <>
       <Hero />
       <JourneySearch />
+      <LocationPicker />
       <LiveStats />
       <IndiaNetwork />
       <LiveMap />

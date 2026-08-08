@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function JourneySearch() {
   return (
-    <section className="-mt-20 relative z-20 px-6">
-      <div className="mx-auto max-w-6xl rounded-3xl bg-white p-8 shadow-2xl">
+    <section className="bg-white py-16">
+      <div className="mx-auto max-w-7xl rounded-3xl bg-white p-8 shadow-2xl">
 
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-bold text-slate-800">
@@ -77,7 +77,7 @@ export default function JourneySearch() {
             <div className="flex items-center rounded-xl border p-3">
               <Users className="mr-2 text-purple-600" size={20} />
 
-              <select className="w-full outline-none bg-transparent">
+              <select className="w-full bg-transparent outline-none">
                 <option>1 Passenger</option>
                 <option>2 Passengers</option>
                 <option>3 Passengers</option>
